@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic Website</title>
+    <script src="https://kit.fontawesome.com/c65dfb19d5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <a href="#" class="logo"><i class="fa-solid fa-child-reaching">pedi<span>care</span>.</i></a>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#book">Book</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#calculator">Calculator</a>
+      </nav>
+      <div id="search-btn" class="fa-solid fa-magnifying-glass"></div>
+      <div id="menu-btn" class="fa-solid fa-bars"></div>
+    </header>
+
+    <!-- Hero Section-->
+    <section class="hero" id="home">
+      <div class="video-background">
+        <video autoplay loop muted>
+          <source src="image/2.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <main class="content">
+        <h1>children's <span>clinic</span></h1>
+        <h1>Comprehensive <span>Pediatric Care</span></h1>
+        <p>
+          Welcome to our Pediatric Clinic! We specialize in providing top-quality healthcare for children. From routine check-ups to specialized treatments, our experienced team is dedicated to the well-being of your child. We create a
+          friendly and nurturing environment to ensure a comfortable experience. Trust us with your child's health and schedule an appointment today.
+        </p>
+        <a href="#" class="btn"> Contact Us <span class="fa-solid fa-chevron-right"></span></a>
+      </main>
+    </section>
+
+    <!-- calculator section-->
+    <section class="calculator" id="calculator">
+      <h1 class="heading">Pediatric Dose <span>Calculator</span></h1>
+      <div class="box-container">
+        <div class="by-weight">
+          <ul>
+            <li id="a" value="first">By Weight</li>
+          </ul>
+          <input type="hidden" name="type" value="first" id="type" />
+        </div>
+        <div class="box1">
+          <div class="dose">
+            <p><strong>Dose</strong></p>
+            <input type="number" id="doseInput" placeholder="Dose" step="any" value="" />
+            <div class="custom-select">
+              <p>&nbsp;</p>
+              <select id="doseUnit">
+                <option value="mg/day">mg/day</option>
+                <option value="mcg/day">mcg/day</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="weight">
+            <div>
+              <p><strong>Weight</strong></p>
+              <input type="number" id="weightInput" placeholder="Weight" step="any" value="" />
+            </div>
+            <div class="custom-select">
+              <select id="weightUnit">
+                <option value="kg">kg</option>
+                <option value="g">g</option>
+                <option value="lbs">lbs</option>
+                <option value="dag">dag</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <p><strong>Drug Concentration</strong></p>
+        <div class="box2">
+          <div class="mass">
+            <p><strong>Mass</strong></p>
+            <input type="number" id="massInput" placeholder="Concentration" step="any" value="" />
+          </div>
+          <div>
+            <p>&nbsp;</p>
+            <select id="massUnit">
+              <option value="mg">mg</option>
+              <option value="µg">µg</option>
+              <option value="g">g</option>
+            </select>
+          </div>
+          <div class="per">
+            <p><strong>Per</strong></p>
+            <input type="number" id="volumeInput" placeholder="Volume" step="any" value="" />
+          </div>
+          <div>
+            <p>&nbsp;</p>
+            <select id="perUnit">
+              <option value="ml">ml</option>
+              <option value="mm³">mm³</option>
+              <option value="cm³">cm³</option>
+              <option value="cl">cl</option>
+              <option value="cc">cc</option>
+            </select>
+          </div>
+        </div>
+        <div class="dose-freq">
+          <p><strong>Dose Frequency</strong></p>
+          <select id="freqUnit">
+            <option value="Once per day">Once per day</option>
+            <option value="Two times per day">Two times per day</option>
+            <option value="Three times per day">Three times per day</option>
+            <option value="Four times per day">Four times per day</option>
+          </select>
+        </div>
+        <button type="submit" name="submit" class="btn" onclick="calculateDose()">Calculate</button>
+        <p id="result"></p>
+      </div>
+    </section>
+
+    <!-- about section-->
+    <section id="about" class="about">
+      <h1 class="heading">about <span>us</span></h1>
+    </section>
+
+    <!-- services section-->
+
+    <section class="services" id="services">
+      <h1 class="heading">our <span>services</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <i class="fa-regular fa-house-medical-circle-check"></i>
+          <h3>free checkups</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, eaque provident?</p>
+          <a href="#" class="btn"> learn more <span class="fa-solid fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+          <i class="fa-regular fa-house-medical-circle-check"></i>
+          <h3>free checkups</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, eaque provident?</p>
+          <a href="#" class="btn"> learn more <span class="fa-solid fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+          <i class="fa-regular fa-house-medical-circle-check"></i>
+          <h3>free checkups</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, eaque provident?</p>
+          <a href="#" class="btn"> learn more <span class="fa-solid fa-chevron-right"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- calculator section-->
+    <!--
+    <section class="calculator" id="calculator">
+      <h1 class="heading">Drug Dosage <span>Calculator</span></h1>
+      <div class="calculator-container">
+        <label for="weightInput">Patient Weight (in kg):</label>
+        <input type="number" id="weightInput" placeholder="Weight" />
+        <label for="ageInput">Patient Age (in years):</label>
+        <input type="number" id="ageInput" placeholder="Age" />
+        <label for="doseInput">Prescribed Dose (in mg/kg):</label>
+        <input type="number" id="doseInput" placeholder="Dose" />
+        <a href="#" class="btn" onclick="calculateDosage()">Calculate</a>
+        <p id="result"></p>
+      </div>
+    </section>
+
+    -->
+
+    <!-- doctors section-->
+    <section class="doctors" id="doctors">
+      <h1 class="heading">our <span>doctors</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <img src="image/doctor1.jpg" alt="" />
+          <h3>Bruno Rodrig</h3>
+          <span>expert doctor</span>
+          <div class="share">
+            <a href="#" class="fa-brands fa-facebook"></a>
+            <a href="#" class="fa-brands fa-twitter"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="image/doctor2.jpg" alt="" />
+          <h3>Dalton Ngangi</h3>
+          <span>expert doctor</span>
+          <div class="share">
+            <a href="#" class="fa-brands fa-facebook"></a>
+            <a href="#" class="fa-brands fa-twitter"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="image/doctor3.jpg" alt="" />
+          <h3>Jeremy Alford</h3>
+          <span>expert doctor</span>
+          <div class="share">
+            <a href="#" class="fa-brands fa-facebook"></a>
+            <a href="#" class="fa-brands fa-twitter"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="image/doctor4.jpg" alt="" />
+          <h3>Rian Ramirez</h3>
+          <span>expert doctor</span>
+          <div class="share">
+            <a href="#" class="fa-brands fa-facebook"></a>
+            <a href="#" class="fa-brands fa-twitter"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="image/doctor5.jpg" alt="" />
+          <h3>Usman Yousaf</h3>
+          <span>expert doctor</span>
+          <div class="share">
+            <a href="#" class="fa-brands fa-facebook"></a>
+            <a href="#" class="fa-brands fa-twitter"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="image/doctor6.jpg" alt="" />
+          <h3>Eben Kasaye</h3>
+          <span>expert doctor</span>
+          <div class="share">
+            <a href="#" class="fa-brands fa-facebook"></a>
+            <a href="#" class="fa-brands fa-twitter"></a>
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-linkedin"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- booking section-->
+    <section class="book" id="book">
+      <h1 class="heading">book <span>now</span></h1>
+      <div class="row">
+        <div class="image">
+          <img src="image/1.jpg" alt="" />
+        </div>
+
+        <form action="">
+          <h3>book appointment</h3>
+          <input type="text" placeholder="your name" class="box" />
+          <input type="number" placeholder="your number" class="box" />
+          <input type="text" placeholder="your email" class="box" />
+          <input type="date" class="box" />
+          <input type="submit" value="book now" class="btn" />
+        </form>
+      </div>
+    </section>
+
+    <!-- footer section-->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick link</h3>
+          <a href="#"> <i class="fa-solid fa-chevron-right"></i> home</a>
+          <a href="#"> <i class="fa-solid fa-chevron-right"></i> services</a>
+          <a href="#"> <i class="fa-solid fa-chevron-right"></i> calculator</a>
+          <a href="#"> <i class="fa-solid fa-chevron-right"></i> doctors</a>
+          <a href="#"> <i class="fa-solid fa-chevron-right"></i> book</a>
+        </div>
+
+        <div class="box">
+          <h3>our services</h3>
+          <a href="#"> <i class="fa-solid fa-chevron-right"></i> home</a>
+          <a href="#"> <i class="fa-solid fa-chevron-right"></i> services</a>
+          <a href="#"> <i class="fa-solid fa-chevron-right"></i> calculator</a>
+          <a href="#"> <i class="fa-solid fa-chevron-right"></i> doctors</a>
+          <a href="#"> <i class="fa-solid fa-chevron-right"></i> book</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#"> <i class="fa-solid fa-phone"></i> +31-123-4567 </a>
+          <a href="#"> <i class="fa-solid fa-phone"></i> +31-999-0000 </a>
+          <a href="#"> <i class="fa-solid fa-envelope"></i> pedicare@gmail.com </a>
+          <a href="#"> <i class="fa-solid fa-map-market-alt"></i> copenhagen, denmark </a>
+        </div>
+
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="#"> <i class="fa-brands fa-facebook-f"></i> facebook </a>
+          <a href="#"> <i class="fa-brands fa-twitter"></i> twitter </a>
+          <a href="#"> <i class="fa-brands fa-instagram"></i> instagram </a>
+          <a href="#"> <i class="fa-brands fa-linkedin-in"></i> linkedin </a>
+        </div>
+      </div>
+
+      <div class="credit">created by <span>gitalaras</span> | all rights reserved</div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
